@@ -117,7 +117,7 @@ export const PayPalCheckout: React.FC<PayPalCheckoutProps> = ({
     }
   };
 
-  const onApprove = async (data: any, actions: any) => {
+  const onApprove = async (_data: any, actions: any) => {
     try {
       // Capture the payment on PayPal
       const details = await actions.order.capture();

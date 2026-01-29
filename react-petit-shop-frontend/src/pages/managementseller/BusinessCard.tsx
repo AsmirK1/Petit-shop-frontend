@@ -281,7 +281,7 @@ export const BusinessCard: React.FC<Props> = ({
       <div className="mt-4 space-y-3">
         {(business.pages || []).map((page, __idx) => (
           <PagePreview
-            key={page.id ?? page.Id ?? `${business.id}-page-${__idx}`}
+            key={page.id ?? `${business.id}-page-${__idx}`}
             page={page}
             onAddCart={(cart) => addCartToPage(page.id, cart)}
             onUpdatePage={async (id, title) => {

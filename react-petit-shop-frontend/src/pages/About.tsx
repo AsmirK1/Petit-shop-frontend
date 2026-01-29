@@ -24,22 +24,6 @@ function IconLinkedIn(props: { className?: string }) {
     </svg>
   );
 }
-function SocialLinks({ githubUrl, linkedinUrl }: { githubUrl: string; linkedinUrl: string }) {
-  const btn =
-    "inline-flex items-center gap-2 rounded-xl px-3 py-2 text-sm ring-1 ring-white/10 bg-white/5 hover:bg-white/10 transition";
-  return (
-    <div className="flex items-center gap-2">
-      <a href={githubUrl} target="_blank" rel="noreferrer" className={btn} aria-label="GitHub">
-        <IconGithub className="h-4 w-4" />
-        GitHub
-      </a>
-      <a href={linkedinUrl} target="_blank" rel="noreferrer" className={btn} aria-label="LinkedIn">
-        <IconLinkedIn className="h-4 w-4" />
-        LinkedIn
-      </a>
-    </div>
-  );
-}
 
 export const About = () => {
     // const developers: {

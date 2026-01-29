@@ -39,7 +39,7 @@ export const SellerChat: React.FC = () => {
       }
     } catch (e) {
       console.error('seller chat send error', e);
-      setMessages((m) => [...m, { from: 'ai', text: `Error contacting seller AI: ${e?.message || e}` }]);
+      setMessages((m) => [...m, { from: 'ai', text: `Error contacting seller AI: ${e instanceof Error ? e.message : String(e)}` }]);
     } finally { setLoading(false); }
   }
 

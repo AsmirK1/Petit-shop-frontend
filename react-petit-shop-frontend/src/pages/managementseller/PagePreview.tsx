@@ -75,7 +75,7 @@ export const PagePreview: React.FC<Props> = ({ page, onAddCart, onUpdatePage, on
           <div className="text-base-content/60 italic">No carts yet.</div>
         ) : (
           (page.carts || []).map((cart) => (
-            <div key={cart.id ?? cart.Id ?? `${page.id}-cart-${Math.random().toString(36).slice(2,8)}`} className="card bg-base-100 border border-base-200 p-3 flex items-center gap-4 shadow-sm">
+            <div key={cart.id ?? `${page.id}-cart-${Math.random().toString(36).slice(2,8)}`} className="card bg-base-100 border border-base-200 p-3 flex items-center gap-4 shadow-sm">
               {cart.image && <img src={cart.image} className="w-14 h-14 object-cover rounded" />}
               {editingCartId === cart.id ? (
                 <div className="flex-1">
@@ -107,7 +107,7 @@ export const PagePreview: React.FC<Props> = ({ page, onAddCart, onUpdatePage, on
                 <div className="flex-1">
                   <h4 className="font-semibold text-base text-primary">{cart.title}</h4>
                   <p className="text-sm text-base-content/70">{cart.category}</p>
-                  <p className="text-accent font-bold">${Number(cart.price || cart.Price || 0).toFixed(2)}</p>
+                  <p className="text-accent font-bold">${Number(cart.price || 0).toFixed(2)}</p>
                 </div>
               )}
               <div className="flex flex-col gap-2">
